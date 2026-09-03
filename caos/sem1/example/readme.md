@@ -125,3 +125,28 @@ Commits:
 `./app`
 
 `nm app`
+
+6. gdb
+
+`g++ -std=c++20 -g -O0 main.cpp math.cpp -o app_debug`
+
+`-g` = add debug information
+
+`gdb ./app_debug`
+
+In GDB:
+
+`break main`
+`run`
+`list`
+`next`
+`print x`
+
+`next` v.s. `step`:
+
+`next` = next line
+`step` = step inside
+
+`backtrace` / `bt` - call stack
+
+`info locals` -  local vars (have a look at program state in running point)
