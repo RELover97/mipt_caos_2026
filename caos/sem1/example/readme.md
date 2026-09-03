@@ -202,3 +202,17 @@ Sanitizers:
 `-fsanitize=undefined`
 
 для обнаружения UB
+
+Out of bounds task
+
+`g++ -std=c++20 -g -O0 out-of-bounds.cpp -o out-of-bounds`
+
+`./out-of-bounds`
+
+Программа может напечатать мусор, упасть или даже «нормально» завершиться.
+
+`g++ -std=c++20 -g -O1 -fsanitize=address -fno-omit-frame-pointer out-of-bounds.cpp -o out-of-bounds_asan`
+
+`-fno-omit-frame-pointer` — это флаг gcc, который запрещает компилятору удалять frame pointer (RBP) из функций (нужно для упрощения работы sanitizers)
+
+`./out-of-bounds_asan`
