@@ -203,6 +203,13 @@ Sanitizers:
 
 для обнаружения UB
 
+- LeakSanitizer
+
+`-fsanitize=leak`
+
+для поиска утечек памяти
+
+
 Out of bounds task
 
 `g++ -std=c++20 -g -O0 out-of-bounds.cpp -o out-of-bounds`
@@ -233,3 +240,8 @@ UB
 All together
 
 `g++ -std=c++20 -g -O1 -fsanitize=address,undefined -fno-omit-frame-pointer bad.cpp -o bad_san`
+
+
+Leak sanitizer
+
+`g++ -g -fsanitize=leak leak.cpp -o leak`
