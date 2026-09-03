@@ -269,3 +269,10 @@ File related sys calls:
 Stats:
 
 `strace -c ./hello`
+
+10. Hometask
+
+1) build hometask.cpp
+2) try gdb commands 
+3) try sanitizers
+4) try strace
