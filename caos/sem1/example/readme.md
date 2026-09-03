@@ -245,3 +245,27 @@ All together
 Leak sanitizer
 
 `g++ -g -fsanitize=leak leak.cpp -o leak`
+
+9. strace
+
+C++ code
+   ↓
+libc / libstdc++
+   ↓
+system calls
+   ↓
+Linux kernel
+
+`strace` трассирует системные вызовы и сигналы процесса, показывая имя syscall, аргументы и возвращаемое значение. Он также может фильтровать вызовы, следить за дочерними процессами (`-f`) и собирать статистику (`-c`)
+
+`g++ hello.cpp -o hello`
+
+`strace ./hello`
+
+File related sys calls:
+
+`strace -e trace=%file ./hello`
+
+Stats:
+
+`strace -c ./hello`
