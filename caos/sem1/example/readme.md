@@ -182,3 +182,23 @@ Change `math.cpp` and `main.cpp`
 `run`
 
 `bt`
+
+8. Sanitizers
+
+GDB отвечает на вопрос "Что происходило с программой в момент выполнения?"
+
+Sanitizer отвечает на вопрос "Есть ли в программе определённые классы ошибок выполнения?"
+
+Sanitizers:
+
+- AddressSanitizer:
+
+`-fsanitize=address`
+
+для обнаружения out-of-bounds и use-after-free
+
+- UndefinedBehaviorSanitizer:
+
+`-fsanitize=undefined`
+
+для обнаружения UB
