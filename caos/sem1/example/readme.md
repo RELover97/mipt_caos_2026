@@ -222,3 +222,14 @@ Use after free
 `g++ -g -O1 -fsanitize=address -fno-omit-frame-pointer use-after-free.cpp -o use-after-free_asan`
 
 `./use-after-free_asan`
+
+
+UB
+
+Для signed integer overflow поведение undefined.
+
+`g++ -g -O1 -fsanitize=undefined ub.cpp -o ub_ubsan`
+
+All together
+
+`g++ -std=c++20 -g -O1 -fsanitize=address,undefined -fno-omit-frame-pointer bad.cpp -o bad_san`
