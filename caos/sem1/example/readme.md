@@ -115,3 +115,13 @@ Commits:
 - `.strtab` - строки, используемыее таблицей символов
 
 - `.rela.text`, `.rela.data` - relocation entries
+
+5. Linkage
+
+`g++ main.o -o app` -> error
+
+`g++ main.o math.o -o app`
+
+`./app`
+
+`nm app`
