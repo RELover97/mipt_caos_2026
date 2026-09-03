@@ -150,3 +150,21 @@ In GDB:
 `backtrace` / `bt` - call stack
 
 `info locals` -  local vars (have a look at program state in running point)
+
+Change square
+
+`g++ -std=c++20 -g -O0 main.cpp math.cpp -o app_debug`
+
+`gdb ./app_debug`
+
+In GDB:
+
+`break square`
+`run`
+`next`
+`watch result` (only after `result` is allocated on stack!)
+`continue`
+
+Теперь GDB остановится, когда `result` изменится.
+
+`watchpoint` отвечает на вопрос «когда изменилась эта переменная?»
