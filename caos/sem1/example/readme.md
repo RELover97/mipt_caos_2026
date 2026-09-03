@@ -168,3 +168,17 @@ In GDB:
 Теперь GDB остановится, когда `result` изменится.
 
 `watchpoint` отвечает на вопрос «когда изменилась эта переменная?»
+
+7. Find error via gdb
+
+Change `math.cpp` and `main.cpp`
+
+`g++ -std=c++20 -g -O0 main.cpp math.cpp -o app_debug`
+
+`./app_debug` -> segmentation fault
+
+`gdb ./app_debug`
+
+`run`
+
+`bt`

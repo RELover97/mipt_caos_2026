@@ -14,7 +14,7 @@ int main()
     int x = 7;
 
     std::cout << "square = " << square(x) << '\n';
-    std::cout << "divide = " << divide(20, 4) << '\n';
+    std::cout << divide(20, 0) << '\n';
 
     std::cout << MESSAGE << '\n';
 
