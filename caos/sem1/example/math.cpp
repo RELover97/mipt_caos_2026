@@ -7,7 +7,6 @@ int square(int x) {
     return result;
 }
 
-int divide(int a, int b) 
-{
+int divide(int a, int b) {
     return a / b;
 }
